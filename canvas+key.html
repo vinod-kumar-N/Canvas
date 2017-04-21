@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="700" height="700">
+      OOPS! Sorry
+    </canvas>
+    <script type="text/javascript">
+    var mycanvas = document.getElementById('canvas').getContext('2d');
+    var x = 284;
+    var y = 130;
+    var mx = 0;
+    var my = 0;
+    var width = 568;
+    var height = 262;
+    function circle(x,y,r) {
+                          mycanvas.beginPath();
+                          mycanvas.arc(x, y, r, 0, Math.PI*2, true);
+                          mycanvas.fill();
+                        }
+
+                        function clear() {
+                          mycanvas.clearRect(0, 0, width, height);
+                        }
+
+        function init(){
+          window.keydown = keydownControl;
+          return setInterval(draw,10);
+        }
+        function draw() {
+                          clear();
+                          circle(x, y, 20);
+
+                          if (x + mx > width || x + mx < 0)
+                                mx = -mx;
+                          if (y + my > height || y + my < 0)
+                                my = -my;
+
+                          x += mx;
+                          y += my;
+
+                        }
+
+        init();
+        function keydownControl(e){
+          if(e.keyCode==37) {
+                mx = -2;
+                my = 0;
+    } else
+        if (e.keyCode==38) {
+                mx = 0;
+        my = -2;
+    } else if
+        (e.keyCode==39) {
+        mx = 2;
+        my = 0;
+    } else
+        if (e.keyCode==40) {
+        mx = 0;
+                my = 2;
+    }
+
+        }
+    </script>
+  </body>
+</html>

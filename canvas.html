@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="700" height="700">
+      OOPS! Sorry
+    </canvas>
+    <script type="text/javascript">
+    var mycanvas = document.getElementById('canvas').getContext('2d');
+    var x = 568;
+    var y = 262;
+    var mx = 2;
+    var my = 4;
+    var width = 568;
+    var height = 262;
+        function init(){
+          return setInterval(draw, 20);
+        }
+        init();
+        function draw(){
+          clear();
+          circle(x,y,20);
+          if(x+mx > width || x + mx < 0)
+          mx = -mx;
+          if(y + my > height || y + my < 0)
+          my = -my;
+
+          x += mx;
+          y += my;
+        }
+        function circle(x,y,r) {
+          mycanvas.beginPath();
+          mycanvas.arc(x,y,r,0,Math.PI*2, true);
+          mycanvas.fill();
+        }
+        function clear(){
+          mycanvas.clearRect(0,0,width + 20,height + 20)
+        }
+    </script>
+  </body>
+</html>

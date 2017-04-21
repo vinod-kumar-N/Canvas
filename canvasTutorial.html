@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas</title>
+  </head>
+  <body onload="draw();">
+    <canvas id="canvas" width="700" height="700">
+      OOPS! Sorry
+    </canvas>
+    <script type="text/javascript">
+      function draw(){
+          var mycanvas = document.getElementById('canvas').getContext('2d');
+
+          mycanvas.beginPath();
+          mycanvas.moveTo(140,140);
+          mycanvas.lineTo(130,190);
+          mycanvas.fill();
+          mycanvas.stroke();
+
+          //begin with new one PAth again
+          mycanvas.beginPath();
+          mycanvas.moveTo(140,140);
+          mycanvas.lineTo(160,190);
+          mycanvas.fill();
+          mycanvas.stroke();
+
+          mycanvas.beginPath();
+          mycanvas.moveTo(0,230);
+          mycanvas.lineTo(130,190);
+          mycanvas.fill();
+          mycanvas.stroke();
+
+          mycanvas.beginPath();
+          mycanvas.moveTo(0,230);
+          mycanvas.lineTo(130,260);
+          mycanvas.fill();
+          mycanvas.stroke();
+
+          mycanvas.beginPath();
+          mycanvas.moveTo(140,300);
+          mycanvas.lineTo(130,260);
+          mycanvas.fill();
+          mycanvas.stroke();
+
+          mycanvas.beginPath();
+          mycanvas.moveTo(140,300);
+          mycanvas.lineTo(160,260);
+          mycanvas.fill();
+          mycanvas.stroke();
+
+          mycanvas.beginPath();
+          mycanvas.moveTo(300,230);
+          mycanvas.lineTo(160,190);
+          mycanvas.fill();
+          mycanvas.stroke();
+
+          mycanvas.beginPath();
+          mycanvas.moveTo(300,230);
+          mycanvas.lineTo(160,260);
+          mycanvas.fill();
+          mycanvas.stroke();
+
+
+      }
+    </script>
+  </body>
+</html>

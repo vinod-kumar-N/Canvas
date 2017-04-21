@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </head>
+  <body onload="draw()">
+    <canvas id="canvas" >
+      OOPS! Sorry
+    </canvas>
+    <script type="text/javascript">
+        var mycanvas = document.getElementById('canvas').getContext('2d'),
+        ww = window.innerWidth,
+        wh = window.innerHeight,
+        x = ww/2,
+        y = wh/2,
+        distance = ww/30;
+        width =ww,
+        head = wh;
+
+        function draw(){
+            mycanvas.fillStyle = "#373737";
+            mycanvas.fillRect(0,0,ww,wh)
+        }
+        
+    </script>
+  </body>
+</html>
